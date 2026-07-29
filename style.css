@@ -1,0 +1,628 @@
+/* =================================
+   REMOVE DEFAULT SPACING
+================================= */
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+
+/* =================================
+   BODY
+================================= */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4;
+
+    color: #292929;
+
+}
+
+
+/* =================================
+   NAVIGATION BAR
+================================= */
+
+.navbar {
+
+    height: 62px;
+
+    width: 100%;
+
+    background-color: #d4d4d4;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 48px;
+
+    padding-right: 50px;
+
+}
+
+
+/* Logo */
+
+.logo {
+
+    width: 58px;
+
+    height: 62px;
+
+    background-color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.logo img {
+
+    width: 55px;
+
+    height: 55px;
+
+    object-fit: contain;
+
+}
+
+
+/* Navigation links */
+
+.nav-menu {
+
+    list-style: none;
+
+    display: flex;
+
+    margin-left: 85px;
+
+    gap: 105px;
+
+}
+
+
+.nav-menu li a {
+
+    text-decoration: none;
+
+    color: #222;
+
+    font-size: 14px;
+
+}
+
+
+.nav-menu li a:hover {
+
+    color: #24829c;
+
+}
+
+
+/* Login and Register */
+
+.nav-buttons {
+
+    display: flex;
+
+    gap: 47px;
+
+    margin-left: auto;
+
+}
+
+
+.login-btn,
+
+.register-btn {
+
+    background-color: #348aa3;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 6px 20px;
+
+    font-size: 14px;
+
+}
+
+
+.login-btn:hover,
+
+.register-btn:hover {
+
+    background-color: #236f86;
+
+}
+
+
+
+/* =================================
+   WELCOME SECTION
+================================= */
+
+.welcome-section {
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 38px 82px 43px 82px;
+
+    gap: 225px;
+
+}
+
+
+/* Welcome Image */
+
+.welcome-image img {
+
+    width: 230px;
+
+    height: 157px;
+
+    object-fit: cover;
+
+}
+
+
+/* Welcome Text */
+
+.welcome-content {
+
+    width: 400px;
+
+}
+
+
+.welcome-content h1 {
+
+    font-size: 21px;
+
+    line-height: 26px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.welcome-content p {
+
+    font-size: 17px;
+
+    line-height: 22px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* Explore button */
+
+.explore-button {
+
+    display: inline-block;
+
+    text-decoration: none;
+
+    color: white;
+
+    background-color: #42a2b9;
+
+    padding: 9px 50px 9px 6px;
+
+    font-size: 16px;
+
+}
+
+
+.explore-button:hover {
+
+    background-color: #2a8198;
+
+}
+
+
+
+/* =================================
+   SUBJECT SECTION
+================================= */
+
+.subject-section {
+
+    padding-left: 20px;
+
+    padding-bottom: 68px;
+
+}
+
+
+.subject-section h2 {
+
+    font-size: 17px;
+
+    margin-bottom: 8px;
+
+}
+
+
+.subject-list {
+
+    display: flex;
+
+    gap: 105px;
+
+    padding-left: 20px;
+
+}
+
+
+/* Subject Card */
+
+.subject {
+
+    width: 115px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+
+.subject img {
+
+    width: 115px;
+
+    height: 57px;
+
+    object-fit: cover;
+
+    margin-bottom: 14px;
+
+}
+
+
+/* View Button */
+
+.subject a {
+
+    text-decoration: none;
+
+    background-color: #4b99b6;
+
+    color: white;
+
+    padding: 4px 11px;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+}
+
+
+.subject a:hover {
+
+    background-color: #287a96;
+
+}
+
+
+
+/* =================================
+   RESOURCE SECTION
+================================= */
+
+.resource-section {
+
+    width: 760px;
+
+    margin-left: 20px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* One resource row */
+
+.resource-row {
+
+    display: grid;
+
+    grid-template-columns: 305px 190px 170px;
+
+    align-items: center;
+
+    min-height: 50px;
+
+}
+
+
+/* File */
+
+.file {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+}
+
+
+.file p {
+
+    font-size: 16px;
+
+    line-height: 19px;
+
+}
+
+
+.file-icon {
+
+    font-size: 18px;
+
+}
+
+
+/* Subject */
+
+.resource-subject {
+
+    font-size: 16px;
+
+}
+
+
+/* Date */
+
+.date {
+
+    font-size: 16px;
+
+}
+
+
+
+/* =================================
+   FOOTER
+================================= */
+
+footer {
+
+    width: 100%;
+
+    min-height: 108px;
+
+    border-top: 1px solid #333;
+
+    background-color: #eeeeee;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding-left: 17px;
+
+    padding-right: 35px;
+
+}
+
+
+/* Footer item */
+
+.footer-content {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 17px;
+
+}
+
+
+.footer-content img {
+
+    width: 37px;
+
+    height: 37px;
+
+    object-fit: contain;
+
+}
+
+
+.footer-content p {
+
+    font-size: 16px;
+
+}
+
+
+
+/* =================================
+   RESPONSIVE DESIGN
+================================= */
+
+@media screen and (max-width: 900px) {
+
+
+    .navbar {
+
+        height: auto;
+
+        padding: 10px 20px;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .nav-menu {
+
+        gap: 30px;
+
+        margin-left: 40px;
+
+    }
+
+
+    .nav-buttons {
+
+        gap: 15px;
+
+    }
+
+
+    .welcome-section {
+
+        gap: 60px;
+
+        padding: 40px;
+
+    }
+
+
+    .subject-list {
+
+        gap: 60px;
+
+    }
+
+
+    .resource-section {
+
+        width: 90%;
+
+    }
+
+
+    .resource-row {
+
+        grid-template-columns: 2fr 1fr 1fr;
+
+    }
+
+}
+
+
+
+/* Mobile */
+
+@media screen and (max-width: 600px) {
+
+
+    .navbar {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+
+    .nav-menu {
+
+        margin: 15px 0;
+
+        gap: 20px;
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .nav-buttons {
+
+        margin: 0;
+
+    }
+
+
+    .welcome-section {
+
+        flex-direction: column;
+
+        padding: 35px 20px;
+
+        gap: 30px;
+
+    }
+
+
+    .welcome-image img {
+
+        width: 100%;
+
+        height: auto;
+
+    }
+
+
+    .welcome-content {
+
+        width: 100%;
+
+    }
+
+
+    .subject-list {
+
+        flex-wrap: wrap;
+
+    }
+
+
+    .resource-row {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        padding: 15px 0;
+
+        border-bottom: 1px solid #cccccc;
+
+    }
+
+
+    footer {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+        padding: 25px;
+
+    }
+
+}
