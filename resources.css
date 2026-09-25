@@ -1,4 +1,6 @@
-/* ================= GENERAL ================= */
+/* =====================================================
+   GENERAL
+===================================================== */
 
 * {
     margin: 0;
@@ -6,454 +8,354 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: Arial, Helvetica, sans-serif;
-
-    background-color: #f5f8fc;
-
-    color: #333;
+    background: #f5f8fc;
+    color: #222;
 }
 
 
-
-/* ================= NAVIGATION BAR ================= */
+/* =====================================================
+   NAVIGATION BAR
+===================================================== */
 
 header {
-    background-color: #ffffff;
-
-    box-shadow:
-        0 2px 10px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    background: #ffffff;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
-
 
 .navbar {
     width: 90%;
-
     max-width: 1200px;
-
-    height: 75px;
-
+    height: 92px;
     margin: auto;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 }
 
 
+/* Logo */
 
-/* ================= LOGO ================= */
+.logo {
+    display: flex;
+    align-items: center;
+}
 
 .logo img {
-    width: 58px;
-
-    height: 58px;
-
+    width: 75px;
+    height: 75px;
     object-fit: contain;
 }
 
 
-
-/* ================= NAVIGATION MENU ================= */
+/* Navigation Menu */
 
 .nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+
     list-style: none;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 32px;
 }
 
+.nav-menu li {
+    list-style: none;
+}
 
-.nav-menu li a {
+.nav-menu a {
     text-decoration: none;
 
-    color: #333;
+    color: #222;
 
-    font-size: 16px;
-
-    font-weight: 500;
+    font-size: 20px;
 
     transition: 0.3s;
 }
 
-
-.nav-menu li a:hover,
-.nav-menu li a.active {
-    color: #1976d2;
+.nav-menu a:hover {
+    color: #1488b9;
 }
 
-
-
-/* ================= LOGIN / REGISTER ================= */
-
-.nav-buttons {
-    display: flex;
-
-    align-items: center;
-
-    gap: 10px;
+.nav-menu a.active {
+    color: #1488b9;
 }
-
-
-.login-btn,
-.register-btn {
-    text-decoration: none;
-
-    padding: 10px 20px;
-
-    border-radius: 6px;
-
-    font-size: 15px;
-
-    font-weight: 500;
-
-    transition: 0.3s;
-}
-
 
 
 /* Login */
 
 .login-btn {
-    color: #1976d2;
+    display: inline-block;
 
-    border: 1px solid #1976d2;
+    text-decoration: none;
 
-    background-color: transparent;
+    color: #1488b9;
+
+    border: 1.5px solid #1488b9;
+
+    border-radius: 8px;
+
+    padding: 12px 27px;
+
+    font-size: 17px;
+
+    transition: 0.3s;
 }
-
 
 .login-btn:hover {
-    background-color: #1976d2;
-
+    background: #1488b9;
     color: white;
 }
 
 
+/* =====================================================
+   RESOURCES PAGE
+===================================================== */
 
-/* Register */
-
-.register-btn {
-    background-color: #1976d2;
-
-    color: white;
-
-    border: 1px solid #1976d2;
-}
-
-
-.register-btn:hover {
-    background-color: #125ca1;
-
-    border-color: #125ca1;
-}
-
-
-
-/* ================= RESOURCES SECTION ================= */
-
-.resources-section {
+.resources-page {
     width: 90%;
-
     max-width: 1200px;
-
-    min-height: calc(100vh - 225px);
 
     margin: auto;
 
-    padding: 55px 0 65px;
+    padding-top: 55px;
+    padding-bottom: 70px;
+
+    text-align: center;
 }
 
 
-.resources-section h1 {
-    text-align: center;
+/* Main Heading */
 
-    color: #1976d2;
+.resources-page h1 {
+    font-size: 40px;
 
-    font-size: 34px;
+    color: #1488b9;
 
     margin-bottom: 10px;
 }
 
 
-.intro {
-    text-align: center;
+/* Description */
+
+.resources-intro {
+    font-size: 20px;
 
     color: #666;
-
-    font-size: 16px;
 
     margin-bottom: 35px;
 }
 
 
-
-/* ================= SEARCH BOX ================= */
+/* =====================================================
+   SEARCH
+===================================================== */
 
 .search-box {
     display: flex;
 
     justify-content: center;
+    align-items: center;
 
-    margin-bottom: 40px;
+    gap: 12px;
+
+    margin-bottom: 48px;
 }
 
+.search-box input {
+    width: 420px;
+    height: 55px;
 
-.search-input {
-    width: 500px;
+    padding: 0 18px;
 
-    height: 48px;
-
-    background-color: white;
-
-    border: 1px solid #ddd;
+    border: 1px solid #ccc;
 
     border-radius: 7px;
 
-    display: flex;
+    background: white;
 
-    align-items: center;
+    font-size: 18px;
 
-    padding: 0 16px;
-
-    box-shadow:
-        0 2px 8px rgba(0, 0, 0, 0.05);
+    outline: none;
 }
 
-
-.search-input i {
-    color: #1976d2;
-
-    font-size: 17px;
-
-    margin-right: 12px;
+.search-box input:focus {
+    border-color: #1488b9;
 }
 
+.search-box button {
+    height: 55px;
 
-.search-input input {
-    width: 100%;
-
-    height: 100%;
+    padding: 0 25px;
 
     border: none;
 
-    outline: none;
+    border-radius: 7px;
 
-    font-size: 15px;
+    background: #1488b9;
 
-    color: #333;
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.search-box button:hover {
+    background: #0d719d;
 }
 
 
-.search-input input::placeholder {
-    color: #999;
-}
+/* =====================================================
+   SUBJECT CARDS
+===================================================== */
 
+.resource-cards {
+    width: 100%;
 
-
-/* ================= RESOURCE CARDS ================= */
-
-.resource-container {
     display: grid;
 
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
-    gap: 25px;
+    gap: 30px;
 }
 
 
+/* Individual Card */
+
 .resource-card {
-    background-color: white;
+    min-height: 345px;
 
-    border-radius: 10px;
+    background: #ffffff;
 
-    padding: 28px 25px;
+    border-radius: 12px;
+
+    padding: 35px 30px 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
 
     text-align: center;
 
     box-shadow:
-        0 4px 12px rgba(0, 0, 0, 0.08);
+        0 5px 18px rgba(0, 0, 0, 0.08);
 
-    transition: 0.3s;
-
-    border: 1px solid #eeeeee;
+    transition: all 0.3s ease;
 }
-
 
 .resource-card:hover {
     transform: translateY(-5px);
 
     box-shadow:
-        0 8px 18px rgba(0, 0, 0, 0.12);
+        0 10px 25px rgba(0, 0, 0, 0.13);
 }
 
 
+/* =====================================================
+   SUBJECT ICON
+===================================================== */
 
-/* PDF Icon */
+.resource-icon {
+    width: 75px;
+    height: 75px;
 
-.pdf-icon {
     margin-bottom: 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #1488b9;
+
+    font-size: 50px;
+}
+
+.code-icon {
+    font-size: 48px;
+
+    font-weight: bold;
 }
 
 
-.pdf-icon i {
-    font-size: 42px;
-
-    color: #1976d2;
-}
-
-
-
-/* Resource Name */
+/* =====================================================
+   CARD TITLE
+===================================================== */
 
 .resource-card h2 {
-    font-size: 19px;
+    font-size: 29px;
 
-    color: #333;
-
-    line-height: 1.4;
-
-    min-height: 54px;
-
-    margin-bottom: 15px;
-}
-
-
-
-/* Subject */
-
-.resource-card .subject {
-    color: #555;
-
-    font-size: 14px;
-
-    margin-bottom: 8px;
-}
-
-
-
-/* Date */
-
-.resource-card .date {
-    color: #777;
-
-    font-size: 13px;
+    color: #222;
 
     margin-bottom: 18px;
 }
 
 
+/* =====================================================
+   CARD DESCRIPTION
+===================================================== */
 
-/* ================= VIEW BUTTON ================= */
+.resource-card p {
+    max-width: 320px;
 
-.view-button {
-    display: inline-flex;
+    color: #666;
 
-    align-items: center;
+    font-size: 18px;
 
-    justify-content: center;
+    line-height: 1.6;
 
-    gap: 8px;
+    margin-bottom: 25px;
+}
 
-    padding: 10px 25px;
 
-    background-color: #1976d2;
+/* =====================================================
+   VIEW BUTTON
+===================================================== */
+
+.view-btn {
+    margin-top: auto;
+
+    display: inline-block;
+
+    padding: 12px 30px;
+
+    background: #1488b9;
 
     color: white;
 
     text-decoration: none;
 
-    border-radius: 6px;
+    border-radius: 7px;
 
-    font-size: 15px;
-
-    font-weight: 500;
+    font-size: 17px;
 
     transition: 0.3s;
 }
 
+.view-btn:hover {
+    background: #0d719d;
 
-.view-button:hover {
-    background-color: #125ca1;
-
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
 
-
-/* ================= LOADING ================= */
-
-.loading {
-    grid-column: 1 / -1;
-
-    text-align: center;
-
-    color: #777;
-
-    padding: 40px;
-}
-
-
-
-/* ================= NO RESOURCES ================= */
-
-.no-resources {
-    grid-column: 1 / -1;
-
-    text-align: center;
-
-    padding: 50px;
-
-    color: #777;
-}
-
-
-.no-resources i {
-    font-size: 40px;
-
-    color: #1976d2;
-
-    margin-bottom: 15px;
-}
-
-
-
-/* ================= ERROR ================= */
-
-.error-message {
-    grid-column: 1 / -1;
-
-    text-align: center;
-
-    padding: 40px;
-
-    color: #d9534f;
-}
-
-
-.error-message i {
-    font-size: 40px;
-
-    margin-bottom: 15px;
-}
-
-
-
-/* ================= FOOTER ================= */
+/* =====================================================
+   FOOTER
+===================================================== */
 
 footer {
-    background-color: #1976d2;
+    width: 100%;
 
-    min-height: 90px;
+    min-height: 105px;
 
-    padding: 20px 7%;
+    background: #1488b9;
 
     display: flex;
 
@@ -461,7 +363,7 @@ footer {
 
     justify-content: space-around;
 
-    gap: 20px;
+    padding: 20px 7%;
 }
 
 
@@ -470,128 +372,98 @@ footer {
 
     align-items: center;
 
-    gap: 10px;
-
-    color: white;
+    gap: 12px;
 }
 
 
 .footer-content img {
-    width: 28px;
-
-    height: 28px;
+    width: 38px;
+    height: 38px;
 
     object-fit: contain;
 
-    border-radius: 4px;
+    background: white;
+
+    border-radius: 5px;
 }
 
 
 .footer-content p {
-    font-size: 14px;
-}
-
-
-
-/* ================= COPYRIGHT ================= */
-
-.copyright {
-    background-color: #125ca1;
-
     color: white;
 
-    text-align: center;
-
-    padding: 14px;
-
-    font-size: 13px;
+    font-size: 16px;
 }
 
 
+/* =====================================================
+   RESPONSIVE
+===================================================== */
 
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 950px) {
+@media (max-width: 900px) {
 
     .navbar {
-        width: 94%;
+        width: 95%;
     }
-
 
     .nav-menu {
-        gap: 18px;
+        gap: 20px;
     }
 
-
-    .nav-menu li a {
-        font-size: 14px;
+    .nav-menu a {
+        font-size: 17px;
     }
 
+    .resource-cards {
+        grid-template-columns: 1fr;
 
-    .resource-container {
-        grid-template-columns:
-            repeat(2, 1fr);
+        max-width: 500px;
+
+        margin: auto;
     }
 
+    footer {
+        flex-direction: column;
+
+        gap: 20px;
+    }
 }
 
 
-
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 
     .navbar {
         height: auto;
 
-        padding: 15px 0;
-
         flex-direction: column;
 
         gap: 15px;
+
+        padding: 15px 0;
     }
 
-
     .nav-menu {
-        gap: 15px;
-
         flex-wrap: wrap;
 
         justify-content: center;
     }
 
-
-    .nav-buttons {
-        margin-bottom: 5px;
+    .search-box {
+        flex-direction: column;
     }
 
-
-    .resources-section {
-        width: 94%;
-
-        padding-top: 35px;
-    }
-
-
-    .resources-section h1 {
-        font-size: 28px;
-    }
-
-
-    .search-input {
+    .search-box input {
         width: 100%;
     }
 
-
-    .resource-container {
-        grid-template-columns: 1fr;
+    .search-box button {
+        width: 150px;
     }
 
-
-    footer {
-        flex-direction: column;
-
-        align-items: flex-start;
-
-        padding: 25px 8%;
+    .resources-page h1 {
+        font-size: 32px;
     }
 
+    .resources-intro {
+        font-size: 17px;
+    }
 }
