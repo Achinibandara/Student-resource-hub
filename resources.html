@@ -2,157 +2,171 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <title>Student Resource Hub | Resources</title>
 
-    <title>Resources | Student Resource Hub</title>
-
-    <!-- CSS -->
+    <!-- Resources Page CSS -->
     <link rel="stylesheet" href="resources.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
 </head>
 
-
 <body>
-
 
     <!-- ================= NAVIGATION BAR ================= -->
 
     <header>
-
         <nav class="navbar">
 
-
             <!-- Logo -->
-
             <div class="logo">
-
-                <img src="image/logo.jpeg"
-                     alt="Student Resource Hub Logo">
-
+                <img src="image/logo.jpeg" alt="Student Resource Hub Logo">
             </div>
 
-
-            <!-- Navigation Menu -->
-
+            <!-- Navigation -->
             <ul class="nav-menu">
 
                 <li>
-                    <a href="index.html">
-                        Home
-                    </a>
+                    <a href="index.html">Home</a>
                 </li>
 
                 <li>
-                    <a href="resources.html"
-                       class="active">
-                        Resources
-                    </a>
+                    <a href="resources.html" class="active">Resources</a>
                 </li>
 
                 <li>
-                    <a href="about.html">
-                        About
-                    </a>
+                    <a href="about.html">About</a>
                 </li>
 
                 <li>
-                    <a href="contact.html">
-                        Contact
-                    </a>
+                    <a href="contact.html">Contact</a>
                 </li>
 
             </ul>
 
-
-            <!-- Login / Register -->
-
+            <!-- Login -->
             <div class="nav-buttons">
-
-                <a href="login.html"
-                   class="login-btn">
+                <a href="login.html" class="login-btn">
                     Login
                 </a>
-
-                <a href="register.html"
-                   class="register-btn">
-                    Register
-                </a>
-
             </div>
 
         </nav>
-
     </header>
 
 
+    <!-- ================= RESOURCES CONTENT ================= -->
 
-    <!-- ================= RESOURCES SECTION ================= -->
+    <main class="resources-page">
 
-    <main class="resources-section">
+        <h1>Study Resources</h1>
 
-
-        <h1>
-            Study Resources
-        </h1>
-
-
-        <p class="intro">
+        <p class="resources-intro">
             Find useful study materials and resources for your subjects.
         </p>
 
 
-
-        <!-- ================= SEARCH ================= -->
+        <!-- Search -->
 
         <div class="search-box">
 
-            <div class="search-input">
+            <input
+                type="text"
+                id="resourceSearch"
+                placeholder="Search resources..."
+            >
 
-                <i class="fa-solid fa-magnifying-glass"></i>
+            <button type="button" onclick="searchResources()">
+                🔍 Search
+            </button>
 
-                <input type="text"
-                       id="searchInput"
-                       placeholder="Search resources...">
+        </div>
+
+
+        <!-- ================= SUBJECT CARDS ================= -->
+
+        <section class="resource-cards">
+
+
+            <!-- ICT -->
+
+            <div class="resource-card">
+
+                <div class="resource-icon code-icon">
+                    &lt;/&gt;
+                </div>
+
+                <h2>ICT</h2>
+
+                <p>
+                    Study materials and resources related to
+                    Information and Communication Technology.
+                </p>
+
+                <a href="ict.html" class="view-btn">
+                    View
+                </a>
 
             </div>
 
-        </div>
+
+            <!-- MATHEMATICS -->
+
+            <div class="resource-card">
+
+                <div class="resource-icon">
+                    🧮
+                </div>
+
+                <h2>Mathematics</h2>
+
+                <p>
+                    Useful mathematics notes and study materials
+                    for university students.
+                </p>
+
+                <a href="maths.html" class="view-btn">
+                    View
+                </a>
+
+            </div>
 
 
+            <!-- ENGLISH -->
 
-        <!-- ================= RESOURCE CARDS ================= -->
+            <div class="resource-card">
 
-        <div class="resource-container"
-             id="resourceContainer">
+                <div class="resource-icon">
+                    📖
+                </div>
 
-            <p class="loading">
-                Loading resources...
-            </p>
+                <h2>English</h2>
 
-        </div>
+                <p>
+                    English learning materials to improve
+                    language and communication skills.
+                </p>
 
+                <a href="english.html" class="view-btn">
+                    View
+                </a>
+
+            </div>
+
+        </section>
 
     </main>
-
 
 
     <!-- ================= FOOTER ================= -->
 
     <footer>
 
+        <!-- Location -->
 
         <div class="footer-content">
 
-            <img src="image/location.jpeg"
-                 alt="Location">
+            <img src="image/location.jpeg" alt="Location">
 
             <p>
                 Rajarata University of Sri Lanka
@@ -161,10 +175,11 @@
         </div>
 
 
+        <!-- Email -->
+
         <div class="footer-content">
 
-            <img src="image/mail.jpeg"
-                 alt="Email">
+            <img src="image/mail.jpeg" alt="Email">
 
             <p>
                 tec.rjt.ac.lk
@@ -173,10 +188,11 @@
         </div>
 
 
+        <!-- Phone -->
+
         <div class="footer-content">
 
-            <img src="image/phone.jpeg"
-                 alt="Phone">
+            <img src="image/phone.jpeg" alt="Phone">
 
             <p>
                 025-2222335
@@ -184,254 +200,44 @@
 
         </div>
 
-
     </footer>
 
 
-
-    <!-- ================= COPYRIGHT ================= -->
-
-    <div class="copyright">
-
-        © 2026 Student Resource Hub.
-        All rights reserved.
-
-    </div>
-
-
-
-    <!-- ================= JAVASCRIPT ================= -->
+    <!-- ================= SEARCH SCRIPT ================= -->
 
     <script>
 
+        function searchResources() {
 
-        /* ================= LOAD RESOURCES ================= */
+            let searchText =
+                document.getElementById("resourceSearch")
+                .value
+                .toLowerCase()
+                .trim();
 
-        let allResources = [];
+            let cards =
+                document.querySelectorAll(".resource-card");
 
+            cards.forEach(function(card) {
 
-        function loadResources() {
+                let text =
+                    card.innerText.toLowerCase();
 
+                if (text.includes(searchText)) {
 
-            fetch("backend/get_resources.php")
+                    card.style.display = "flex";
 
+                } else {
 
-                .then(response => {
+                    card.style.display = "none";
 
-
-                    if (!response.ok) {
-
-                        throw new Error(
-                            "Server error: " + response.status
-                        );
-
-                    }
-
-
-                    return response.json();
-
-                })
-
-
-                .then(data => {
-
-
-                    allResources = data;
-
-                    displayResources(allResources);
-
-                })
-
-
-                .catch(error => {
-
-
-                    console.error(
-                        "Error loading resources:",
-                        error
-                    );
-
-
-                    document.getElementById(
-                        "resourceContainer"
-                    ).innerHTML = `
-
-                        <div class="error-message">
-
-                            <i class="fa-solid fa-circle-exclamation"></i>
-
-                            <p>
-                                Unable to load resources.
-                            </p>
-
-                        </div>
-
-                    `;
-
-                });
-
-        }
-
-
-
-        /* ================= DISPLAY RESOURCES ================= */
-
-        function displayResources(resources) {
-
-
-            const container =
-                document.getElementById(
-                    "resourceContainer"
-                );
-
-
-            container.innerHTML = "";
-
-
-            /* No resources */
-
-            if (resources.length === 0) {
-
-
-                container.innerHTML = `
-
-                    <div class="no-resources">
-
-                        <i class="fa-solid fa-folder-open"></i>
-
-                        <p>
-                            No resources available.
-                        </p>
-
-                    </div>
-
-                `;
-
-
-                return;
-
-            }
-
-
-
-            /* Create cards */
-
-            resources.forEach(resource => {
-
-
-                const card =
-                    document.createElement("div");
-
-
-                card.className =
-                    "resource-card";
-
-
-                card.innerHTML = `
-
-                    <div class="pdf-icon">
-
-                        <i class="fa-solid fa-file-pdf"></i>
-
-                    </div>
-
-
-                    <h2>
-                        ${resource.resource_name}
-                    </h2>
-
-
-                    <p class="subject">
-
-                        <strong>Subject:</strong>
-                        ${resource.subject}
-
-                    </p>
-
-
-                    <p class="date">
-
-                        <strong>Uploaded:</strong>
-                        ${resource.upload_date}
-
-                    </p>
-
-
-                    <a href="resources/${resource.file_name}"
-                       target="_blank"
-                       class="view-button">
-
-                        <i class="fa-solid fa-eye"></i>
-
-                        View
-
-                    </a>
-
-                `;
-
-
-                container.appendChild(card);
+                }
 
             });
 
         }
 
-
-
-        /* ================= SEARCH ================= */
-
-        document.getElementById(
-            "searchInput"
-        ).addEventListener(
-            "input",
-            function () {
-
-
-                const searchText =
-                    this.value
-                    .toLowerCase()
-                    .trim();
-
-
-                const filteredResources =
-                    allResources.filter(
-                        function(resource) {
-
-
-                            return (
-
-                                resource.resource_name
-                                    .toLowerCase()
-                                    .includes(searchText)
-
-                                ||
-
-                                resource.subject
-                                    .toLowerCase()
-                                    .includes(searchText)
-
-                            );
-
-                        }
-                    );
-
-
-                displayResources(
-                    filteredResources
-                );
-
-            }
-        );
-
-
-
-        /* ================= START ================= */
-
-        loadResources();
-
-
     </script>
-
 
 </body>
 
