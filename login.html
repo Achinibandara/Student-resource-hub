@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Student Resource Hub | Login</title>
+<title>Login - Student Resource Hub</title>
 
 <link rel="stylesheet" href="login.css">
 
@@ -20,17 +21,17 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 <nav>
 
-<div class="logo">
-<img src="image/logo.jpeg">
-</div>
+    <div class="logo">
+        <img src="image/logo.jpeg" alt="Student Resource Hub">
+    </div>
 
-<ul>
+    <ul>
 
-<li><a href="index.html">Home</a></li>
-<li><a href="#">About</a></li>
-<li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+       <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
 
-</ul>
+    </ul>
 
 </nav>
 
@@ -39,71 +40,72 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
 
 <section class="login-section">
 
-<div class="login-box">
+    <div class="login-box">
 
-<i class="fa-regular fa-circle-user user"></i>
+        <i class="fa-regular fa-circle-user user"></i>
 
-<h2>Login</h2>
+        <h2>Login</h2>
 
-<p>Welcome back! Please login to continue.</p>
+        <p>Welcome back! Please login to continue.</p>
 
-<form action="backend/login.php" method="POST">
 
-    <label>Email</label>
+        <!-- Login Form -->
 
-    <input 
-        type="email"
-        name="email"
-        placeholder="Enter your email"
-        required
-    >
+        <form action="backend/login.php" method="POST">
 
-    <label>Password</label>
+            <label>Email Address</label>
 
-    <input 
-        type="password"
-        name="password"
-        placeholder="Enter your password"
-        required
-    >
+            <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
 
-    <button type="submit">Login</button>
 
-</form>
+            <label>Password</label>
 
-<label>Email Address</label>
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+            >
 
-<input type="email" placeholder="Enter your email">
 
-<label>Password</label>
+            <div class="forgot">
 
-<input type="password" placeholder="Enter your password">
+                <a href="#">Forgot Password?</a>
 
-<div class="forgot">
+            </div>
 
-<a href="#">Forgot Password?</a>
 
-</div>
+            <button type="submit">Login</button>
 
-<button type="submit">Login</button>
 
-<div class="line">
+            <div class="line">
 
-<hr><span>or</span><hr>
+                <hr>
+                <span>or</span>
+                <hr>
 
-</div>
+            </div>
 
-<p class="register">
 
-Don't have an account?
+            <p class="register">
 
-</p>
+                Don't have an account?
 
-<a href="#" class="register-btn">Register Here</a>
+            </p>
 
-</form>
 
-</div>
+          <a href="#" class="register-btn">
+    Register Here
+</a>
+
+        </form>
+
+    </div>
 
 </section>
 
@@ -112,37 +114,41 @@ Don't have an account?
 
 <footer>
 
-<div class="footer-item">
+    <div class="footer-item">
 
-<i class="fa-solid fa-location-dot"></i>
+        <i class="fa-solid fa-location-dot"></i>
 
-<span>Rajarata University of Sri Lanka</span>
+        <span>Rajarata University of Sri Lanka</span>
 
-</div>
+    </div>
 
-<div class="footer-item">
 
-<i class="fa-solid fa-envelope"></i>
+    <div class="footer-item">
 
-<span>admin@studenthub.com</span>
+        <i class="fa-solid fa-envelope"></i>
 
-</div>
+        <span>admin@studenthub.com</span>
 
-<div class="footer-item">
+    </div>
 
-<i class="fa-solid fa-phone"></i>
 
-<span>+94 77 123 4567</span>
+    <div class="footer-item">
 
-</div>
+        <i class="fa-solid fa-phone"></i>
+
+        <span>+94 77 123 4567</span>
+
+    </div>
 
 </footer>
 
+
 <div class="copy">
 
-© 2026 Student Resource Hub. All rights reserved.
+    © 2026 Student Resource Hub. All rights reserved.
 
 </div>
+
 
 </body>
 </html>
