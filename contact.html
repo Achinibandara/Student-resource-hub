@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Student Resource Hub | Contact</title>
 
     <link rel="stylesheet" href="contact.css">
@@ -19,13 +21,13 @@
 <nav class="navbar">
 
     <div class="logo">
-        <img src="img/logo.jpeg" alt="">
+        <img src="image/logo.jpeg" alt="Student Resource Hub">
     </div>
 
     <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="#">Resources</a></li>
-        <li><a href="#">About</a></li>
+       <li><a href="resources.html">Resources</a></li>
+<li><a href="about.html">About</a></li>
         <li><a class="active" href="contact.html">Contact</a></li>
     </ul>
 
@@ -77,19 +79,39 @@
 
         <div class="contact-form">
 
-            <form>
+            <form action="backend/contact.php" method="POST">
 
                 <label>Name</label>
-                <input type="text" placeholder="Enter your name">
+
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                >
+
 
                 <label>Email</label>
-                <input type="email" placeholder="Enter your email">
+
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+
 
                 <label>Message</label>
-                <textarea rows="6"
-                placeholder="Type your message here..."></textarea>
 
-                <button>Send Message</button>
+                <textarea
+                    name="message"
+                    rows="6"
+                    placeholder="Type your message here..."
+                    required
+                ></textarea>
+
+
+                <button type="submit">Send Message</button>
 
             </form>
 
@@ -98,7 +120,6 @@
     </div>
 
 </section>
-
 
 
 <!-- Footer -->
@@ -127,6 +148,7 @@
     </div>
 
 </footer>
+
 
 <div class="copyright">
     © 2026 Student Resource Hub. All rights reserved.
